@@ -1,5 +1,7 @@
 package com.stock.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,10 @@ public class UserServiceImpl implements UserService{
 	public int insertUser(User user) {
 		// TODO Auto-generated method stub
 		return userDAO.insertUser(user);
+	}
+
+	public List<User> queryAllUser() {
+		return userDAO.queryAllUser();
 	}
 
 }

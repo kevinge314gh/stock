@@ -41,6 +41,10 @@
          #{nickname})
          </insert>
          
+         <select id="queryAllUser" resultType="User">
+           select * from days_user
+         </select>
+         
 <!--          <delete id="deleteStudent" parameterType="int">
              delete from users_name where id = #{id}
          </delete>
