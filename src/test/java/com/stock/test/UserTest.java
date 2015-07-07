@@ -17,17 +17,18 @@ private UserService userService;
 	
 	@Before
 	public void before(){     
-		org.apache.log4j.BasicConfigurator.configure();
+		
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:conf/spring.xml"
 				,"classpath:conf/spring-mybatis.xml"});
+		org.apache.log4j.BasicConfigurator.configure();
 		userService = (UserService) context.getBean("userServiceImpl");
 	}
 	
 	@Test
 	public void addUser(){
 		User user = new User();
-		user.setNickname("kevin");
+		user.setNickname("wkguo");
 		user.setState(2);
 		System.out.println(userService.insertUser(user));
 	}
